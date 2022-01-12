@@ -1,0 +1,92 @@
+#include <string.h>
+#include <iostream>
+using namespace std;
+
+#define konser
+const int pokok = 5000000;
+
+int main(){
+
+    int tiket, nominal, harga, c = 0;
+    char jtiket[25], x;
+    float l, bayar, kembali;
+    int arr[3] = {3};
+
+Pilihan :
+	cout << "==============================================================" << endl;
+	cout << "=                                                            =" << endl;
+	cout << "=                                                            =" << endl;
+    cout << "=                    KONSER BILLIE EILISH                    =" << endl;
+    cout << "=                                                            =" << endl;
+    cout << "=                                                            =" << endl;
+    cout << "==============================================================" << endl;
+    cout << "Jenis Tiket : " << endl;
+    cout << "~`~`~`~`~`~`~`~`~`~`~`~`~`~`" << endl;
+    cout << "`         1.VVIP           ~" << endl;
+    cout << "~         2.VIP            `" << endl;
+    cout << "`         3.Biasa          ~" << endl;
+    cout << "~`~`~`~`~`~`~`~`~`~`~`~`~`~`" << endl;
+    cout << "PILIH TIKET  : ";
+    cin >> tiket;
+    cout << "BANYAK TIKET : ";
+    cin >> l;
+{
+    string peringatan [5] =
+    {"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! INGAT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+    "                31 Desember 2021 mulai pukul 20.00 WIB - Selesai                        ",
+    "                         Dilarang Membawa Alat Tajam                                    ",
+    "                        Dilarang Membawa Obat Terlarang                                 ",
+    "                         Dilarang Membuat Keributan                                     "};
+
+    for (char i=0;i<5;i++){
+
+       cout << peringatan[i] << endl;
+    }
+    }
+
+
+        if(tiket==1){
+            strcpy(jtiket, "VVIP");
+            nominal=5000000;
+            harga=l*nominal;
+        }
+        else if(tiket==2){
+            strcpy(jtiket, "VIP");
+            nominal=4000000;
+            harga=l*nominal;
+        }
+        else if(tiket==3){
+            strcpy(jtiket, "Biasa");
+            nominal=2500000;
+            harga=l*nominal;
+        }
+        else{
+            strcpy(jtiket, "TIDAK ADA JENIS TIKET TERSEBUT");
+            nominal=0;
+            harga=0;
+        }
+        cout << "===========================" << endl;
+        cout << "Jenis Tiket             : " << jtiket << endl;
+        cout << "Banyak Tiket            : " << l << endl;
+        cout << "Harga                   : " << harga << endl;
+        cout << "===========================" << endl;
+        cout << "Total Bayar             : Rp. ";
+        cin >> bayar;
+        kembali=bayar-harga;
+        cout << "Kembalian               : Rp. " << kembali << endl;
+        cout << "===========================" << endl;
+        cout << endl;
+
+		cout << "KEMBALI KE MENU AWAL (Y atau G) :  ";
+        cin >> x;
+        if(x=='Y' || x=='y'){
+            goto Pilihan;
+        }
+        else if(x=='G' || x=='g')
+        do{
+            cout << "\nENJOY YOUR CONCERT!!!" << endl;
+            c++;
+        }while(c<5);
+
+    return 0;
+}
